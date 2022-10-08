@@ -5,7 +5,7 @@
     animation: slideLeft 2s ease-in-out forwards;
     .card-image{
         overflow: hidden;
-
+        animation: slideUp 2s ease-in-out forwards;
         :hover{
             transform: scale(1.099);
             transition: all 5s ease-out;
