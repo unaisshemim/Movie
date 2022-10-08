@@ -1,0 +1,14 @@
+.products{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    padding: 15px;
+    // background-color: rgb(42, 40, 40);
+    background-image: url("https://webneel.com/wallpaper/sites/default/files/images/08-2014/2-black-wallpaper-pattern.jpg");
+  
+    
+}
+@media (max-width:500px) {
+    
+}
