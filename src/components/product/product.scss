@@ -113,9 +113,20 @@
                 justify-content: space-around;
                 align-items: center;
                 overflow: hidden;
+                @media (max-width:500px) {
+                  font-size: 10px;
+                  display: flex;
+             
+                  justify-content: space-between;
+                  
+                }
                 h1{
                     font-size: 20px;
                     font-weight: 700;
+                    @media (max-width:500px) {
+                      font-size: 14px;
+                      
+                    }
                 }
                 span{
                     font-size: 15px;
@@ -123,6 +134,7 @@
                 }
                 .overall-rating{
                     display: flex;
+                    
                     .rating-star{
                         color: yellow;  
                         
@@ -132,6 +144,10 @@
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
+                    @media (max-widht:500px) {
+                      font-size: 15px;
+                      
+                    }
                     .centering{
                         display: flex;
                         align-items: center;
