@@ -29,7 +29,11 @@ console.log(id)
   },[id])
 
 
-const {title,backdrop_path}=movie
+const {title,backdrop_path,overview,release_date,vote_average,vote_count,popularity}=movie
+
+
+
+
   const backGroundStyle = {
     background: ` linear-gradient(rgba(72, 64, 64, 0.5), rgba(84, 76, 76, 0.5)) , url(https://image.tmdb.org/t/p/original${backdrop_path})`,
     
@@ -50,15 +54,11 @@ const {title,backdrop_path}=movie
         <div className="detail-container">
           <div className="movie-title">
             <h1>{title}</h1>
-            <span>2022.10.23</span>
+            <span>{release_date}</span>
           </div>
           <div className="movie-description">
             <p>
-              After escaping from an Estonian psychiatric facility, Leena
-              Klammer travels to America by impersonating Esther, the missing
-              daughter of a wealthy family. But when her mask starts to slip,
-              she is put against a mother who will protect her family from the
-              murderous “child” at any cost.
+              {overview}
             </p>
           </div>
           <div className="movie-rating">
@@ -66,8 +66,8 @@ const {title,backdrop_path}=movie
             <div className="overall-rating">
                 <StarIcon className="rating-star" fontSize="large"/>
                 <div>
-                    <h1>9.0/10</h1>
-                    <span>25k</span>
+                    <h1>{vote_average?.toFixed(1)}/10</h1>
+                    <span>{vote_count}</span>
                 </div>
                 </div>
             <div className="your-rating">
@@ -82,7 +82,7 @@ const {title,backdrop_path}=movie
               <h1>Popularity</h1>
               <div className="centering">
                   <TrendingUpIcon fontSize="large"/>
-                  <span>1534</span>
+                  <span>{Math.ceil(popularity)}</span>
               </div>
             </div>
           </div>

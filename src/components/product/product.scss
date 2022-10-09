@@ -27,16 +27,22 @@
     .movie-detail-container{
         background-color: white;
         width: 130vh;
-        height: 90vh;
+        height: 100vh;
         border-radius: 20px;
         display: flex;
         box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+
         flex-direction: column;
+
+        @media (max-width:500px) {
+          height: auto;
+        }
         .image-container{
             
             flex: 2;
             overflow: hidden;
             animation: slideIn 1.5s ease-in-out forwards;
+            
             img{
                 width: 100%;
                 height: 100%;
@@ -88,6 +94,16 @@
                 font-size: 25px;
                 padding: 30px;
                 overflow: hidden;
+                @media (max-width:500px) {
+
+                  font-size: 15px;
+                  
+                  p{
+                    position: relative  ;
+                    top: 25px; 
+                  }
+                  
+                }
             }
             .movie-rating{
                 flex:1;
