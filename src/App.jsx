@@ -11,7 +11,9 @@ import {
 
 
 
-
+window.onload=()=>{
+  App()
+}
 
 
 function App() {
