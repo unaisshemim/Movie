@@ -10,11 +10,10 @@ import {searchProduct} from '../../redux/productRedux'
 
 const Navbar = ()=> {
 const dispatch=useDispatch()
- 
+  
   const inputChange=(e)=>{
     dispatch(searchProduct(e.target.value))
 
-    
     
   }
   

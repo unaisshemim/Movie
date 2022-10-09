@@ -7,6 +7,7 @@ const productSlice=createSlice({
         currentId:0,
         currentProduct:[],
         filterProduct:[],
+        searchProduct:""
         
 
     },
@@ -39,8 +40,8 @@ const productSlice=createSlice({
             }
 
         },searchProduct:(state,action)=>{
-                console.log(state)
-                
+           state.searchProduct=action.payload
+    
         }
     }
 })

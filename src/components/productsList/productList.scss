@@ -2,10 +2,10 @@
     margin-top: 20px;
     margin-left: 10px;
     overflow: hidden;
-    animation: slideLeft 2s ease-in-out forwards;
+    animation: slideLeft 1s ease-in-out forwards;
     .card-image{
         overflow: hidden;
-        animation: slideUp 2s ease-in-out forwards;
+        animation: expand 2s ease-in-out forwards;
         :hover{
             transform: scale(1.099);
             transition: all 5s ease-out;

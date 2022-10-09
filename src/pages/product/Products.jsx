@@ -9,7 +9,21 @@ import './products.scss'
 function Products( ) {
 
 const dispatch=useDispatch()
+
 const movies=useSelector(state=>state.product.currentProduct)
+const search=useSelector(state=>state.product.searchProduct)
+
+
+const filteredProduct = movies.filter(
+  value => {
+    return (
+      value
+      .title
+      .toLowerCase()
+      .includes(search.toLowerCase()) 
+    );
+  }
+);
 
 useEffect(()=>{
 getProducts(dispatch)
@@ -26,7 +40,7 @@ getProducts(dispatch)
   return (
     <div className='products'>   
     <Navbar/>  
-        {movies?.map((value,key)=>{
+        {filteredProduct?.map((value,key)=>{
           return <MediaCard key={key} value={value}/>
         })
       }
