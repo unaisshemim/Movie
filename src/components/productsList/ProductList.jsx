@@ -12,7 +12,7 @@ import "./productList.scss";
 import {useDispatch} from 'react-redux'
 import { setCurrentId } from "../../redux/productRedux";
 
-export default function MediaCard({ value }) {
+export default function   MediaCard({ value }) {
   
   const dispatch=useDispatch()
 
@@ -46,15 +46,17 @@ const handleClick=()=>{
         </div>
        
         </Link>
+        <div className="card-description"> 
+
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {value.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           <Stack spacing={2} style={{display:"flex" ,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
-            <span style={{fontSize:"20px",fontWeight:"700",marginTop:"14px"}}>{value.vote_average}</span>
+            <span style={{fontSize:"20px",fontWeight:"700",marginTop:"14px"}} className="card-rating">{value.vote_average}</span>
             <StarIcon className="rating-star" fontSize="large" style={{color:"gold"}}/>
-            <span>{value.release_date}</span>
+            <span className="card-rating card-date">{value.release_date}</span>
           </Stack>
         </Typography>
       </CardContent>
@@ -62,6 +64,7 @@ const handleClick=()=>{
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
       </CardActions>
+        </div>
     </Card>
     <div className="overlay"></div>
         </div>
